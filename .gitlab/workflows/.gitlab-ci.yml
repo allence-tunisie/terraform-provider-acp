@@ -1,9 +1,10 @@
 stages:
-  - test
+  - lint
 
-test:
+go-lint:
   tags:
     - aws-runner
-  stage: test
+  stage: lint
+  image: golangci/golangci
   script: 
-    - pwd
+    - golangci-lint run
