@@ -5,6 +5,6 @@ go-lint:
   tags:
     - aws-runner
   stage: lint
-  image: golangci/golangci
+  image: golangci/golangci-lint
   script: 
     - golangci-lint run
